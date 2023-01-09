@@ -1,4 +1,4 @@
-import '../styles/CalculatorApp.css';
+import '../styles/CalculatorApp.scss';
 
 function CalculatorApp() {
   return (
