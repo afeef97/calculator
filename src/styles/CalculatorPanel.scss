@@ -1,0 +1,17 @@
+@use './_variables.scss' as vars;
+@use './_functions.scss' as funcs;
+
+#panel {
+    @include funcs.centre();
+    background-color: vars.$calculator-panel;
+    border-radius: 1rem;
+    width: 80vw;
+    height: 50vh;
+}
+
+@media only screen and (min-width: 600px) {
+    #panel {
+        width: 60vw;
+        height: 65vh;
+    }
+}
