@@ -5,13 +5,6 @@
     @include funcs.centre();
     background-color: vars.$calculator-panel;
     border-radius: 1rem;
-    width: 80vw;
-    height: 50vh;
-}
-
-@media only screen and (min-width: 600px) {
-    #panel {
-        width: 50vw;
-        height: 65vh;
-    }
+    width: 350px;
+    height: 350px;
 }
