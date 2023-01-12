@@ -1,0 +1,25 @@
+@use './variables.scss' as vars;
+
+.display {
+    background-color: vars.$display-screen-bg;
+    color: vars.$display-screen-text;
+    height: 55px;
+    width: 300px;
+    text-align: right;
+    margin-bottom: 5px;
+    border-radius: 0.5rem;
+}
+
+.output-display {
+    height: 20px;
+    padding-top: 0.1rem;
+    padding-right: 0.3rem;
+    font-size: 16px;
+}
+
+.user-input-display {
+    height: 35px;
+    padding-top: 0.5rem;
+    padding-right: 0.3rem;
+    font-size: 24px;
+}

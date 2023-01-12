@@ -1,8 +1,7 @@
 @use './variables.scss' as vars;
 @use './functions.scss' as funcs;
 
-#panel-buttons {
-    @include funcs.centre();
+.panel-buttons {
     display: flex;
     width: 300px;
     height: 240px;
@@ -15,7 +14,7 @@
     border: 1px solid vars.$text-main;
     width: 60px;
     height: 60px;
-    font-size: 1.3rem;
+    font-size: 24px;
 }
 
 .button-pads:hover {
@@ -28,14 +27,14 @@
 }
 // -----------------------
 
-#left-buttons { // Numerals and equal
+.left-buttons { // Numerals and equal
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     width: 180px;
 }
 
 
-#right-buttons { // Operators and clear
+.right-buttons { // Operators and clear
     #add {
         height: 120px;
         grid-row: 2 / 5;
