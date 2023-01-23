@@ -3,31 +3,44 @@ import PanelButtons from "./PanelButtons";
 import PanelScreen from "./PanelScreen";
 
 export default function Panel() {
-    // const [inputArray, setInputArray] = useState([]);
+    const [inputArray, setInputArray] = useState([]);
     const [inputStr, setInputStr] = useState("0");
 
     function handleClickNum(event) {
-        if(inputStr === "0"){
+        if(/^[0+×÷-]/.test(inputStr) && inputStr.length === 1){
             setInputStr("");
         }
-        setInputStr(inputStr => inputStr.concat(event.target.innerText));
+        setInputStr(prevStr => prevStr + event.target.innerText);
     }
 
-    function handleClear() {
+    function handleClickClear() {
         setInputStr("0");
+        setInputArray([]);
     }
 
-    function handleDecimal(event) {
+    function handleClickDecimal(event) {
         if(!inputStr.includes(".")) {
             setInputStr(inputStr => inputStr.concat(event.target.innerText));
+        }
+    }
+
+    function handleClickOperator(event) {
+        if(!/^[0+×÷-]/.test(inputStr)) {
+            setInputArray(prevArray => [...prevArray, inputStr, event.target.innerText]);
+            setInputStr(event.target.innerText);
         }
     }
 
     return (
         <div id="panel" className="panel">
             <div id="panel-content" className="panel-content">
-                <PanelScreen inputDisplay={inputStr}/>
-                <PanelButtons onClickNum={handleClickNum} onClear={handleClear} onClickDecimal={handleDecimal}/>
+                <PanelScreen inputDisplay={inputStr} outputDisplay={inputArray.join(" ")}/>
+                <PanelButtons 
+                    onClickNum={handleClickNum} 
+                    onClickClear={handleClickClear}
+                    onClickDecimal={handleClickDecimal} 
+                    onClickOperator={handleClickOperator}
+                />
             </div>
         </div>
     );
