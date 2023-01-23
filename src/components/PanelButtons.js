@@ -16,11 +16,11 @@ export default function PanelButton(props) {
                 <button id="equals" className="button-pads" onClick={props.onClick}>=</button>
             </div>
             <div id="right-buttons" className="right-buttons">
-                <button id="subtract" className="button-pads" onClick={props.onClick}>-</button>
-                <button id="clear" className="button-pads" onClick={props.onClear}>AC</button>
-                <button id="divide" className="button-pads" onClick={props.onClick}>÷</button>
-                <button id="multiply" className="button-pads" onClick={props.onClick}>×</button>   
-                <button id="add" className="button-pads" onClick={props.onClick}>+</button>
+                <button id="subtract" className="button-pads" onClick={props.onClickOperator}>-</button>
+                <button id="clear" className="button-pads" onClick={props.onClickClear}>AC</button>
+                <button id="divide" className="button-pads" onClick={props.onClickOperator}>÷</button>
+                <button id="multiply" className="button-pads" onClick={props.onClickOperator}>×</button>   
+                <button id="add" className="button-pads" onClick={props.onClickOperator}>+</button>
             </div>
         </div>
     );
