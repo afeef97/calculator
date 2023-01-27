@@ -13,9 +13,11 @@ export default function PanelButton(props) {
                 <button id="three" className="button-pads" onClick={props.onClickNum}>3</button>               
                 <button id="zero" className="button-pads" onClick={props.onClickNum}>0</button>
                 <button id="decimal" className="button-pads" onClick={props.onClickDecimal}>.</button>
-                <button id="equals" className="button-pads" onClick={props.onClick}>=</button>
+                <button id="equals" className="button-pads" onClick={props.onClickEqual}>=</button>
             </div>
             <div id="right-buttons" className="right-buttons">
+                <button id="invert" className="button-pads" onClick={props.onClickInvert}>±</button>
+                <div></div>
                 <button id="subtract" className="button-pads" onClick={props.onClickOperator}>-</button>
                 <button id="clear" className="button-pads" onClick={props.onClickClear}>AC</button>
                 <button id="divide" className="button-pads" onClick={props.onClickOperator}>÷</button>
